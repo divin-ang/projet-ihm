@@ -1,7 +1,8 @@
 <template>
     
-    <div>
-     <p>{{nom}}</p>
+    <div id="">
+       <button id="btnImg"><img src="./../assets/profils/selfPicture.png" alt="" ></button>
+     <p style="font-size:2em;"> Sauna Emile</p>
     
     </div>
 </template>
@@ -14,3 +15,11 @@ export default {
     }
 }
 </script>
+<style>
+#btnImg{
+    margin-top:4em;
+    width: 9em;
+    heigth:4em;
+}
+
+ </style>

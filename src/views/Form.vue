@@ -9,14 +9,14 @@
     <div id="theform">
     
       
-    
+    <br>
       <label for="email">Email</label>
-     
-      <input type="email" name="email" class="theinput" >
-      
+     <br>
+      <input type="email" id="email" class="theinput" @input="recupererEmail" >
+       <br>
      <label for="password">Password (6 or more characters)</label>
-      
-       <input type="password" name="passeword" class="theinput">
+      <br>
+       <input type="password" id="passeword" class="theinput" @input="recupererPass">
      
       
      
@@ -28,7 +28,7 @@
     
       </div>
      
-       <button id="agree" type="submit"> <router-link to="/signup-suite" @click="connection">Agree & join</router-link></button>
+       <button id="agree" type="submit"> <router-link to="/signup-suite" >Agree & join</router-link></button>
          <p>  Or</p>
          <button id="facebook"><strong id="f">f</strong> Continue with Facebook</button>
     
@@ -36,7 +36,7 @@
     
     
     </div>
-   <FootUn />
+   <FootUn id="rien" />
 
     </div>
    
@@ -47,12 +47,15 @@
     background-color: white;
      margin:0 auto;
      width: 400px;
-     height: inherit;
+     height: 22em;
     
+ }
+ #rien {
+  
  }
  #whole{
      background-color: #047BA6;
-     height:inherit;
+     height:43em;
  }
  #make{
      color: white;
@@ -94,7 +97,7 @@
      margin-right:0.7em ;
  }
  .theform{
- 
+    
  }
 </style>
 
@@ -103,10 +106,25 @@
     
 import FootUn from './FootUn.vue'
     
-
+//import io from 'socket.io-client'
 export default {
     components:{
         FootUn
+    },
+    methods:{
+         
+          recupererEmail: function() {
+       
+        //socket.emit("emailId",document.getElementById("email").value)
+
+    },
+    recupererPass:function(){
+       
+       // socket.emit("passId",document.getElementById("password").value)
+        
+    },
+    
+    
     }
 }
 </script>

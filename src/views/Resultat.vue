@@ -1,9 +1,20 @@
 <template>
-    <div>
-    <div v-for="item in result" :key="item.nom" id="ppdiv">
-      <p class="pp" @click="ajout">  {{ item.prenom}}      {{item.nom}}    <img src="./../assets/profils/selfPicture.png" alt="">
-      </p>
-    
+    <div  id="dive">
+    <div id="profil"><Profil /></div>
+    <div    >
+     <p class="pp"><button  class="bb"  @click="ajout">   Sauna emile    <img src="./../assets/profils/selfPicture.png" alt="" >
+       </button> <button class="enregister" @click="increaseconnection">Connect</button></p> 
+      <hr>
+      <p class="pp"><button  class="bb"  @click="ajout">   Ruffin Daniella   <img src="./../assets/profils/selfPicture.png" alt="" >
+       </button> <button class="enregister" @click="increaseconnection">Connect</button></p>
+      <hr>
+      <p class="pp"><button  class="bb"  @click="ajout">   Laurent Panny <img src="./../assets/profils/selfPicture.png" alt="" >
+       </button> <button class="enregister" @click="increaseconnection">Connect</button></p> 
+       
+       <hr>
+       <p class="pp"><button  class="bb"  @click="ajout">   Daymond Ran   <img src="./../assets/profils/selfPicture.png" alt="" >
+       </button> <button class="enregister" @click="increaseconnection">Connect</button></p> 
+
     </div>
        
   
@@ -16,8 +27,11 @@
 
 
 <script>
-
+import Profil from './Profil.vue'
 export default {
+  components:{
+   Profil,
+  },
   data(){
       let t =this.$store.getters.resultat
       let tableau=[]
@@ -32,7 +46,16 @@ export default {
           }
   },methods:{
      ajout(){
-          this.$store.state.connections=this.$store.state.connections+1;
+       let doc = document.getElementsByTagName("enregistrer") ;
+       doc.textContent = "Sent"
+      
+        
+         //
+     },increaseconnection(){
+         this.$store.state.connections=this.$store.state.connections+1;
+           let doc = document.getElementById("resulat") ;
+        
+             doc.style.display="none"
      },
      choix:function(event){
         this.$store.commit('', event.target.value)
@@ -47,3 +70,32 @@ export default {
   }
 }
 </script>
+<style>
+
+#profil{
+  height: 300px;
+  width: 400px;
+  background-color:white;
+  display: none;
+}
+.enregister{
+  border-color: #047BA6;
+  border:solid 0.3px;
+  color:#047BA6;
+  width: 100px;
+  height:40px;
+  border-radius: 10px;
+  margin-left:2em;
+  background-color: white;
+
+}
+.bb{
+  width:150px;
+  height:60px;
+margin-right: 18em;
+background-color: white;
+}
+#resultat{
+  z-index: 7;
+}
+</style>

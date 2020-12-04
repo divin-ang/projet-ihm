@@ -1,13 +1,14 @@
 <template>
     
     <div id="tout">
+     
      <div id="main">
      <button id="post" v-on:click="afficherFormulaire"> <img src="./../assets/pen.png"> start a post
      </button>
      <div id="photos" >
      <img   src="./../assets/photos.png">
           
-   
+ 
       
          
      </div>
@@ -16,12 +17,14 @@
     
      
       <div id="fil">
+      
       <iframe class="" width="480" height="315" src="https://www.youtube.com/embed/zJMtaS_ABv0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
       <img  class="videos" width="480" src="./../assets/photofil.png" alt="">
       <iframe  class="videos" width="480" height="315" src="https://www.youtube.com/embed/yFRpZAepVxM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
+     
     
       
     <div id="thePost" @dblclick="finPost">
@@ -48,8 +51,9 @@
           position: absolute;
           margin-top: 10em;
           margin-left: -30em;
-          z-index: 1;
+          z-index: 0;
     }
+   
     #photos{
         padding-top: 5em;
         height: 0.0000001%;
@@ -77,10 +81,9 @@
         width: 31em;
         height: 3.7em;
         border-radius: 10px;
-        margin-top: 1em;
+        margin-top: 2em;
         border: none;
-        position: fixed;
-        margin-left: -15em;
+       
     }
     #bouton-post{
 
@@ -114,7 +117,7 @@
        width: 30em;
         height: 100%;
        position: absolute;
-        margin-top: 1.6em;
+       
         z-index: 1;
     }
     hr{
@@ -126,8 +129,11 @@
     }
 </style>
 <script>
- 
+ import Profil from './Profil.vue'
 export default {
+    component:{
+        Profil,
+    },
     methods:{
       
       

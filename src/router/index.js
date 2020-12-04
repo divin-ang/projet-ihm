@@ -8,6 +8,7 @@ import Welcome from '../views/Welcome.vue'
 import FormLogin  from '../views/FormLogin.vue'
 import Network from  '../views/Network.vue'
 import Profil from  '../views/Profil.vue'
+import Developpement from  '../views/Developpement.vue'
 
 
 Vue.use(VueRouter)
@@ -41,7 +42,12 @@ const routes = [
   ,{
     path:'/login',
     component:FormLogin
+  },
+  {
+    path:'/development',
+    component:Developpement
   }
+  
   
   ,
   {

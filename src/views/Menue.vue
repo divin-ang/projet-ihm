@@ -16,8 +16,8 @@
                 <router-link to="/welcome"    class="routes"><img id="ih" src="./../assets/home.png" alt=""></router-link>
                  
                 <router-link   to="/network" class="routes"><img id="in" src="./../assets/network.png"  alt=""></router-link>
-                 <router-link to="/signup-suite"  class="routes"><img id="ij"  src="./../assets/job.png"></router-link>
-                   <router-link to="/signup-suite"   class="routes"><img  id="inot" src="./../assets/notification.png"></router-link>
+                 <router-link to="/development"  class="routes"><img id="ij"  src="./../assets/job.png"></router-link>
+                   <router-link to="/development"   class="routes"><img  id="inot" src="./../assets/notification.png"></router-link>
 
                 
 
@@ -44,6 +44,9 @@
         
         
      }
+
+
+     
      #nav{
          background-color:#eee;
          z-index: 7;
@@ -79,13 +82,13 @@
      }
      #resultat{
     display: none;
-        width: 26em;
-        height: 25em;
+        width: 36em;
+        height: 30em;
         border:solid 3px;
         z-index: 8;
         position: fixed;
         border-color: #EEE;
-        margin-left: 13em;
+      
         margin-top: 1em;
         background-color: white;
 

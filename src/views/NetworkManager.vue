@@ -7,11 +7,13 @@
          </div> 
            <p id="name"> {{$store.getters.first_name}} {{$store.getters.last_name}}</p>
          <p id="pres" >Manage your network  </p> 
-        <router-link to="/signup-suite" class="conn"> Connections   0 </router-link><br>
-        <router-link to="/signup-suite" class="conn">    Contacts   0</router-link>
-        <router-link to="/signup-suite" class="conn">  Pages   0 <br>   Grow your network</router-link><br>
-        <router-link to="/signup-suite" class="conn">  Groupes  0</router-link>
-        <router-link to="/signup-suite" class="conn">  Newsletter</router-link>
+         <p id="cnet">   <router-link to="/network" class="conn"> Connections </router-link><br></p>
+      <p></p>
+      <p id="ccon">  <router-link to="/network" class="conn">    Contacts   0</router-link></p>
+     
+       <p id="cg" >  <router-link to="/development" class="conn">  Newsletter</router-link></p> 
+       
+       
          
          
          <hr class="ligne"> 
@@ -43,5 +45,14 @@
      }
      .conn{
          text-align: left;
+     }
+     #cnet{
+       margin-right: 5em;
+     }
+     #ccon{
+         margin-right: 6em;
+     }
+     #cg{
+       padding-right: 6em;
      }
 </style>

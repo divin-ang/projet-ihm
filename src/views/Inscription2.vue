@@ -39,7 +39,7 @@
 
     background-color: white;
      margin:0 auto;
-     width: 400px;
+     width: 450px;
      height: 256px;
     
  }
@@ -63,14 +63,14 @@
         height: 3em;
          background-color: #047BA6;
          border: none;
-
+          margin-left: -0.2em;
 
    }
    #make{
      color: white;
      font-family:  Arial, sans-serif;
      font-size: 2em;
-     margin-top: Opx;
+  
  }
  #continue{
      text-decoration: none;
@@ -97,7 +97,7 @@ export default {
       this.$store.commit('prenom', event.target.value)
     },
     nom:function(event){
-        this.$store.commit('nom', event.target.value)
+        this.$store.commit('', event.target.value)
     }
     
      

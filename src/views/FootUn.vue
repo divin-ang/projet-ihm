@@ -45,6 +45,7 @@ export default {
 <style  scoped>
 #footun{
     background-color: white;
+   
   
     
 }

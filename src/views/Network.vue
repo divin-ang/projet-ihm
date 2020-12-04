@@ -18,7 +18,8 @@
     
    
       float: right;
-      margin-right:38.7em;
+      margin-right:34.7em;
+      padding-top :7em;
       
 
 }
@@ -43,6 +44,7 @@ import Pending from './Pending.vue'
 export default {
     components:{
         Menue,
+        
       
         
         NetworkManager,

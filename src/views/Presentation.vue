@@ -12,8 +12,16 @@
          
          </p> 
          <hr class="ligne"> 
-         <router-link to="/signup-suite" class="conn"> Connections{{$store.getters.connections}}  <br>   Grow your network</router-link><br>
-        <router-link to="/signup-suite" class="conn">    Who viwed your profile    0</router-link>
+         <p id="c">
+          <router-link to="/network" class="conn" id="c"> Connections      {{$store.getters.connections}}    </router-link>
+         </p>
+         <p id="g"> <router-link to="/network" class="conn" id="w"> Grow your network </router-link></p>
+        
+         <p id="w">
+         <router-link to="/network" class="conn" id="w"> Who viwed your    profile    0</router-link>
+         </p>
+         
+         
          
         
          
@@ -44,7 +52,22 @@
      }
      .conn{
          text-align: left;
+         text-decoration: none;
+         padding-top: 2em;
+         color: black;
+       
+
      }
+     #c{
+       margin-right: 3.5em;
+     }
+     #g{
+       margin-right: 4em;
+     }
+     #w{
+       margin-right: 1.2em;
+     }
+     
 </style>
 <script>
 export default {

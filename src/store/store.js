@@ -8,9 +8,7 @@ let t =[
   {nom:'Esther',prenom:"Simon",photo:"./../assets/profils/selfPicture.png"},
   {nom:'Fiona',prenom:"Rani",photo:"./../assets/profils/selfPicture.png"},
   {nom:'William',prenom:"Tony",photo:"./../assets/profils/selfPicture.png"},
-  {nom:'Emma',prenom:"Patson",photo:"./../assets/profils/selfPicture.png"},
-  {nom:'Sandra',prenom:"Ballot",photo:"./../assets/profils/selfPicture.png"},
-  {nom:'Silvain',prenom:"Mauw",photo:"./../assets/profils/selfPicture.png"},
+ 
 ]
 
 
@@ -58,6 +56,12 @@ export const store = new Vuex.Store({
          state.keyword=keyword
       },choix(state,choisie){
         state.choisie= choisie
+      },
+      recuperEmail(state,email){
+        state.email=email
+      },
+      recuperPass(state,password){
+        state.password=password
       }
 
       },
@@ -68,7 +72,9 @@ export const store = new Vuex.Store({
         resultat: state =>state.resultat,
         keyword:state=>state.keyword,
         connections:state=>state.connections,
-        choisie :state=>state.choisie
+        choisie :state=>state.choisie,
+        password :state=>state.password,
+        email:state=>state.email
         
       }
 })

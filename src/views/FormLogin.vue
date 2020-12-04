@@ -3,7 +3,7 @@
     <img src="./../assets/lin4.png" alt="" id="lin2">
     <h1 id="welcome">Welcome back</h1>
     <h3 id="dont">Don't miss your next opportunity. Sign in to stay updated on your professional world.</h3>
-     <form action="http://localhost:3000" method="post">
+    
      <div>
     
       <div class="pass">
@@ -12,11 +12,11 @@
      
      <div class="pass">
       <input type="password" id="password" name="password" placeholder="Password" >
-        <button id="show">Show</button>
+       <p>{{email}}</p>
      </div>
 
      <div class="pass" id="submi">
-     <button id="sign"> <input type="submit" value="Sign in"></button>
+     <button id="sign" @click="identite"> Sign in</button>
       
      
      </div>
@@ -29,7 +29,7 @@
    <FootUn  id="footun"/>
 
      
-     </form>
+  
     
   
 </div>
@@ -38,8 +38,11 @@
 
 
 <style scoped>
+#footUn{
+    color: red;
+}
    #lin2{
-      
+       padding-top: 6em;
        width: 8em;
        
    }
@@ -94,7 +97,7 @@
        width: 96%;
        background-color:#0A66C2;
        border: none;
-       margin-top: 0.3em;
+      
        color: white;
        font-family: Arial, Helvetica, sans-serif;
        font-size: 17px;
@@ -119,9 +122,14 @@
  // ce composant contient le formulaire de la page  d'authentificatin FormLogin.vue
 
 import FootUn from './FootUn.vue'
+
 export default {
     components:{
         FootUn
+    },data(){
+        return{
+           email:this.$store.getters.choisie
+        }
     },
     props:{
         pseudo:{},
@@ -129,7 +137,11 @@ export default {
     },
     methods:{
        identite:()=>{
+          
            
+           console.log(this.$store.getters.choisie)
+          
+        
        }
     }
 }

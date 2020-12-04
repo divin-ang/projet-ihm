@@ -44,7 +44,7 @@
 }
 .ph{
     width: 80px;
-   
+    padding-top:3em;
     margin-right: 1.3em;
     height: 6em;
 }
