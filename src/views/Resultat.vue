@@ -2,18 +2,17 @@
     <div  id="dive">
     <div id="profil"><Profil /></div>
     <div    >
-     <p class="pp"><button  class="bb"  @click="ajout">   Sauna emile    <img src="./../assets/profils/selfPicture.png" alt="" >
-       </button> <button class="enregister" @click="increaseconnection">Connect</button></p> 
-      <hr>
-      <p class="pp"><button  class="bb"  @click="ajout">   Ruffin Daniella   <img src="./../assets/profils/selfPicture.png" alt="" >
-       </button> <button class="enregister" @click="increaseconnection">Connect</button></p>
-      <hr>
-      <p class="pp"><button  class="bb"  @click="ajout">   Laurent Panny <img src="./../assets/profils/selfPicture.png" alt="" >
-       </button> <button class="enregister" @click="increaseconnection">Connect</button></p> 
+     <p class="pp"><button  class="bb"  id="sauna" @click="ajout">   Sauna emile    <img src="./../assets/profils/selfPicture.png" alt="" >
+       </button> <button class="enregister" @click="increaseconnection" id="bsa">Connect</button></p> 
+      <hr id="hsa"> 
+      <p class="pp"><button  class="bb"   id="ruffin" @click="ajout">   Ruffin Daniella   <img src="./../assets/profils/selfPicture.png" alt="" >
+       </button> <button class="enregister" id="bru" @click="increaseconnection">Connect</button></p>
+      <hr id="hru">
+      <p class="pp"><button  class="bb" id="laurent"  @click="ajout">   Laurent Panny <img src="./../assets/profils/selfPicture.png" alt="" >
+       </button> <button class="enregister" @click="increaseconnection" id="bla">Connect</button></p> 
        
-       <hr>
-       <p class="pp"><button  class="bb"  @click="ajout">   Daymond Ran   <img src="./../assets/profils/selfPicture.png" alt="" >
-       </button> <button class="enregister" @click="increaseconnection">Connect</button></p> 
+       <hr id="hla"/>
+      
 
     </div>
        

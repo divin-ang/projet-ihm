@@ -61,6 +61,10 @@ export default {
          let doc = document.getElementById("cansel");
          let doc2 = document.getElementById("supp")
          doc2.style.display="none"
+         document.body.style.backgroundColor="#222"
+         doc.style.backgroundColor="white"
+         document.getElementById("presentation").style.filter='brightness(10%)'
+         document.getElementById("nav").style.filter='brightness(10%)'
           doc.style.display="block"
 
           document.getElementById("en2").textContent="Connect"
@@ -77,6 +81,10 @@ export default {
         
          let doc = document.getElementById("cansel");
          let doc2 = document.getElementById("supp")
+          document.body.style.backgroundColor=""
+        
+         document.getElementById("presentation").style.filter='brightness(100%)'
+         document.getElementById("nav").style.filter='brightness(100%)'
          doc2.style.display="block"
           doc.style.display="none"
           document.getElementById("en2").textContent="Sent"
@@ -85,6 +93,10 @@ export default {
        
          let doc = document.getElementById("cansel");
          let doc2 = document.getElementById("supp")
+          document.body.style.backgroundColor=""
+        
+         document.getElementById("presentation").style.filter='brightness(100%)'
+         document.getElementById("nav").style.filter='brightness(100%)'
          doc2.style.display="block"
           doc.style.display="none"
           document.getElementById("en2").textContent="Connect"

@@ -97,7 +97,7 @@
        width: 96%;
        background-color:#0A66C2;
        border: none;
-      
+       margin-top: 0.3em;
        color: white;
        font-family: Arial, Helvetica, sans-serif;
        font-size: 17px;

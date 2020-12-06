@@ -2,6 +2,7 @@
     
     <div id="container"   class="u">
      <div id="coller">
+  
      <Menue id="menu"  class="u"/></div>
         
              <div class="press-post">
@@ -12,14 +13,15 @@
                    <Post />
                     
                    
-                  
+                   
 
                </div>
            <div id="chat">
             
               <Finish />
+               
             </div>
-    
+           
     </div>
 </template>
 <style>
@@ -28,11 +30,16 @@
    
       float: right;
       margin-right:38.7em;
+     
       
 
 }
 #container{
     margin-bottom: 10em;
+     
+}
+#pres{
+    margin-top:-3em;
 }
 
 #chat{
@@ -46,7 +53,13 @@
    
  
 }
-
+#bou{
+       float: right;
+    padding-top: 20em;
+    
+    margin-left:60em;
+  
+}
 #ch{
       border: solid;
       background-color:white;
@@ -65,6 +78,7 @@
 }
 
 
+
 </style>
 <script>
 import Menue from './Menue.vue'
@@ -74,12 +88,14 @@ import Post from './Post.vue'
 import Finish from './Finish.vue'
 
 
+
 export default {
     components:{
         Menue,
         Presentation,
         Post,
-        Finish,
+        Finish
+    
         
    
     },

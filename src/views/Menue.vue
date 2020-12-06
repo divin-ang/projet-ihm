@@ -6,10 +6,12 @@
         
       
           <div class="nav-item">
+         
+         
+           <th id="kos"><img id="" src="./../assets/lin6.png" alt="" >  
+          <button id="chercher">🔍 </button>  <input type="text" id="rechercher" @click="afficherResultat" @dblclick="augmenter"  @input="diminuer" placeholder="search" ></th>
           
-          <img id="lin" src="./../assets/lin6.png" alt="" >
-          <button id="chercher">🔍 </button>
-          <input type="text" id="recherche" @click="afficherResultat" @dblclick="augmenter"  @input="diminuer" >
+         
            <Resultat id="resultat"/>
          </div>
                
@@ -40,7 +42,9 @@
    
      .nav-item{
          display: inline;
-         margin-right: 15em;
+         margin-right: 4em;
+  
+         
         
         
      }
@@ -48,10 +52,16 @@
 
      
      #nav{
-         background-color:#eee;
-         z-index: 7;
+        
+         z-index: 19;
          height: 60px;
+        background-color:#ffe;
+         height: 40px;
+         margin-top: 1.3em;
+           
+        
          
+       
         
         
      }
@@ -63,21 +73,24 @@
          
      }#ih,#in,#inot,#ij{
          width: 70px;
-         height: 50px;
+         height: 45px;
+         margin-top: 0.2em;
+         margin-right: 0;
          
      }
      #chercher{
          margin-right: 0em;
-          background-color:white;
+          background-color:#eee;
           width: 2em;
          height: 2.8em;
+         
      }
      #lin{
       
-          margin-right: 10em;
+          margin-right: 30em;
           background-color:white;
           
-         padding-top: -3em;
+          padding-top: -3em;
           
      }
      #resultat{
@@ -93,15 +106,18 @@
         background-color: white;
 
 }
-     #recherche{
+     #rechercher{
          border:none;
-         background-color:white;
+        
          width: 20em;
          height: 2.6em;
         
+        margin-right: 20em;
+         background-color:#eee;
+        
        
      }
-     
+    
 </style>
 <script>
 import Resultat from './Resultat.vue'
@@ -114,43 +130,67 @@ export default {
         
    //////////////////////////////////////////////////////////////////:// 
         
-        let resultat = document.getElementsByClassName("pp");
-        let rech = document.getElementById("recherche")
-       let t=[]
-        let r = rech.value.toLowerCase()
-        for(let i=0;i<resultat.length;i++){
-            if(! resultat[i].textContent.toLowerCase().includes(r)){
-                t[i]=resultat[i].textContent
-                  resultat[i].textContent='';
+     
                    
-            }
+            
                
-        }
+        
         //////////////////////////////////////////
         
-    let liste = this.$store.state.resultat;
-    let present = false;
-    for (let i =0;i<liste.length;i++){
-        if(liste[i].prenom+' '+liste[i].nom.toLowerCase()
-        .includes(document.getElementById("recherche").value)
-        ){
-            for(let j=0;j< document.getElementsByClassName("pp").length;j++){
-                if(document.getElementsByClassName("pp")[j].textContent.includes(liste[i].prenom)){
-                    present = true;
-                }
-            }
-          if(!present){
-               let p =document.createElement("p")
-               let img=document.createElement("img")
-                img.setAttribute("src","./../assets/profils/selfPicture.png ")
-                 p.setAttribute("class","pp")
-                   p.textContent=liste[i].prenom+" "+liste[i].nom;
-                 
-                   document.getElementById("ppdiv").appendChild(p);
+    let ruffin = document.getElementById("ruffin");
+let laurent =  document.getElementById("laurent");
+       let sauna =  document.getElementById("sauna");
+       let ran =  document.getElementById("ran");
 
-          }
+        let text = document.getElementById("rechercher")
+        if(!ruffin.textContent.toLowerCase().includes(text.value.toLowerCase())){
+          ruffin.textContent=""
+          document.getElementById("hru").style.display="none"
+          document.getElementById("bru").style.display="none"
+
         }
-    }
+        if(ruffin.textContent==""&& "Ruffin Daniella".toLowerCase().includes(text.value.toLowerCase()) ){
+            ruffin.textContent="Ruffin Daniella"
+            document.getElementById("bru").style.display="inline"
+             document.getElementById("hru").style.display="inline"
+          
+
+        }
+        if(!sauna.textContent.toLowerCase().includes(text.value.toLowerCase())){
+           sauna.textContent=""
+          document.getElementById("hsa").style.display="none"
+          document.getElementById("bsa").style.display="none"
+
+        }
+
+         if(sauna.textContent==""&& "Sauna emile".toLowerCase().includes(text.value.toLowerCase()) ){
+            sauna.textContent="Sauna emile "
+            document.getElementById("bsa").style.display="inline"
+             document.getElementById("hsa").style.display="inline"
+          
+
+        }
+        if(!laurent.textContent.toLowerCase().includes(text.value.toLowerCase())){
+             laurent.textContent=""
+          document.getElementById("hla").style.display="none"
+          document.getElementById("bla").style.display="none"
+        }
+          if(laurent.textContent==""&& "Laurent Panny".toLowerCase().includes(text.value.toLowerCase()) ){
+            laurent.textContent="Laurent Panny"
+            document.getElementById("bla").style.display="inline"
+             document.getElementById("hla").style.display="inline"
+          
+
+        }
+          if(!ran.textContent.toLowerCase().includes(text.value.toLowerCase())){
+             ran.textContent=""
+          document.getElementById("bra").style.display="none"
+        
+        }
+       
+          
+        
+    
         
     },augmenter(){
            let result = this.$store.getters.resultat;

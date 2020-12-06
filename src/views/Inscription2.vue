@@ -97,7 +97,7 @@ export default {
       this.$store.commit('prenom', event.target.value)
     },
     nom:function(event){
-        this.$store.commit('', event.target.value)
+        this.$store.commit('nom', event.target.value)
     }
     
      

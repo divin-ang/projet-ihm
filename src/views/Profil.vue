@@ -19,7 +19,7 @@ export default {
 #btnImg{
     margin-top:4em;
     width: 9em;
-    heigth:4em;
+    height:4em;
 }
 
  </style>

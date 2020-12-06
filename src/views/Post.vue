@@ -6,11 +6,7 @@
      <button id="post" v-on:click="afficherFormulaire"> <img src="./../assets/pen.png"> start a post
      </button>
      <div id="photos" >
-     <img   src="./../assets/photos.png">
-          
- 
-      
-         
+     <img   src="./../assets/photos.png">   
      </div>
      <hr > 
      
@@ -29,7 +25,7 @@
       
     <div id="thePost" @dblclick="finPost">
      <label for="post">Create a post</label>
-      <p id="nom">name</p>
+      <p id="nom">{{$store.getters.first_name}}  {{$store.getters.last_name}}</p>
      <textarea @input="poster"  name="post" id="post-text" placeholder="What do you want to talk about ?" > </textarea>
      <button type="submit"  id="bouton-post"  @click="finPost" >post </button>
       
@@ -48,10 +44,11 @@
         height: 100em;
         border: solid 1px;
           border-radius: 10px;
-          position: absolute;
-          margin-top: 10em;
+       
           margin-left: -30em;
           z-index: 0;
+         
+     
     }
    
     #photos{
@@ -67,16 +64,19 @@
     }
     #thePost{
         display: none;
-        width: 28em;
+        width: 30em;
         height: 25em;
         border:solid 3px;
-        z-index: 4;
-        position: relative;
+        z-index: 16;
+        position: fixed;;
         border-color: #EEE;
-        margin-left: -23em;
-        margin-top: 5em;
-        background-color: white;
+        margin-left: -30em;
+        margin-top: -100em;
+
+    
+      
     }
+   
     #post{
         width: 31em;
         height: 3.7em;
@@ -102,15 +102,17 @@
     
     #menu{
         position: fixed;
-        z-index: 7;
+        z-index: 12;
         width: 1500px;
         margin-right:10em ;
-     
+        margin-top:-4em;
         
+          
+       
     }
     #post-text{
          width: 31em;
-        height: 3.7em;
+        height: 10em;
         border-radius: 10px;
     }
     #fil{
@@ -140,21 +142,29 @@ export default {
 
         
         afficherFormulaire(){
-       
-       
-       document.getElementById("thePost").style.display='block';
+    
+       document.body.style.backgroundColor="#222"
 
-       document.getElementById("menu").style.zIndex="1";
-       document.getElementById("pres").style.zIndex="1"
+        document.getElementById("nav").style.filter= ' brightness(10%)'
         
-         document.getElementById("thePost").style.zIndex="2";
+        document.getElementById("presentation").style.filter= ' brightness(10%)'
+        document.getElementById("chat").style.filter= ' brightness(10%)'
+         document.getElementById("fil").style.filter= ' brightness(10%)'
+        document.getElementById("thePost").style.backgroundColor="white"
+    
+    
+        
+        document.getElementById("thePost").style.display='block';
+      
+        
+        
+     
+ 
+        
+        
    
       
 
-    
-    
-    document.getElementById("thePost").style.backgroundColor="white"
-        
 
    
    
@@ -176,8 +186,19 @@ export default {
     
   },
       finPost(){
-          document.getElementById("thePost").style.display='none';
-          console.log("rien")
+         document.body.style.backgroundColor=""
+
+        document.getElementById("nav").style.filter= ' brightness(100%)'
+        
+        document.getElementById("presentation").style.filter= ' brightness(100%)'
+        document.getElementById("chat").style.filter= ' brightness(100%)'
+         document.getElementById("fil").style.filter= ' brightness(100%)'
+        document.getElementById("thePost").style.backgroundColor="white"
+    
+    
+        
+        document.getElementById("thePost").style.display='none';
+        
          
         
      

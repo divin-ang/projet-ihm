@@ -14,25 +14,9 @@
     </div>
 </template>
 <style>
-#j{
-    
-   
-      float: right;
-      margin-right:34.7em;
-      padding-top :7em;
-      
 
-}
-.press-post{
 
-  float: left;
-    
-    
-}
- #container{
-     background-color: yellowgreen;
- }
-
+ 
 </style>
 <script>
 import Menue from './Menue.vue'
