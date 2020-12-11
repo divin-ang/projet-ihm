@@ -9,7 +9,7 @@
          
          
            <th id="kos"><img id="" src="./../assets/lin6.png" alt="" >  
-          <button id="chercher">🔍 </button>  <input type="text" id="rechercher" @click="afficherResultat" @dblclick="augmenter"  @input="diminuer" placeholder="search" ></th>
+          <button id="chercher">🔍 </button>  <input type="text" id="rechercher" @click="afficherResultat" @dblclick="augmenter"  @input="diminuer" @keydown="rediriger" placeholder="search" ></th>
           
          
            <Resultat id="resultat"/>
@@ -238,6 +238,9 @@ let laurent =  document.getElementById("laurent");
            
     
 
+    },rediriger(e){
+      if (e.keyCode ===13)
+        window.location.href="http://localhost:8080/#/network"
     },
     afficherResultat(){
          let doc = document.getElementById("resultat");

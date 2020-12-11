@@ -7,17 +7,17 @@
      <div>
     
       <div class="pass">
-      <input type="email" id="email" name="email" placeholder="Email">
+      <input type="email" id="email" name="email" placeholder="Email" @input="identite">
       </div>
      
      <div class="pass">
-      <input type="password" id="password" name="password" placeholder="Password" >
-       <p>{{email}}</p>
+      <input type="password" id="password" name="password" placeholder="Password" @input="identite" >
+     
      </div>
 
      <div class="pass" id="submi">
-     <button id="sign" @click="identite"> Sign in</button>
-      
+     
+       <router-link to="/welcome" id=""> <button id="sign" > Sign in</button> </router-link>
      
      </div>
     
@@ -136,13 +136,9 @@ export default {
         nom:{}
     },
     methods:{
-       identite:()=>{
-          
-           
-           console.log(this.$store.getters.choisie)
-          
+   
         
-       }
+       
     }
 }
 </script>

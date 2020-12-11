@@ -27,6 +27,7 @@ export const store = new Vuex.Store({
         keyword:'',
         membres:[],
         connections:0,
+        photoUrl:'',
       
         description:'',
         choisie:'sauna divin'
@@ -45,6 +46,9 @@ export const store = new Vuex.Store({
            
            
 
+        },
+        upload(state,photoUrl){
+          state.photoUrl=photoUrl
         },
         decrire(state,description){
           state.description=description
@@ -74,7 +78,8 @@ export const store = new Vuex.Store({
         connections:state=>state.connections,
         choisie :state=>state.choisie,
         password :state=>state.password,
-        email:state=>state.email
+        email:state=>state.email,
+        photoUrl:state=>state.photoUrl
         
       }
 })
